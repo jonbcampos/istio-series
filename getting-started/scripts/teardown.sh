@@ -11,6 +11,11 @@ export CONTAINER_NAME=${PROJECT_NAME}-container
 echo "setup"
 gcloud config set compute/zone ${INSTANCE_ZONE}
 
+echo "cleanup istio"
+export ISTIO_VERSION=1.0.0
+kubectl delete -f istio-${ISTIO_VERSION}/install/kubernetes/helm/istio/templates/crds.yaml -n istio-system
+rm istio-${ISTIO_VERSION} -rf
+
 echo "remove cluster"
 gcloud container clusters delete ${CLUSTER_NAME} --quiet
 gcloud container clusters list
@@ -18,5 +23,3 @@ gcloud container clusters list
 echo "cleanup files"
 rm $(helm home) -rf
 rm ca.* tiller.* helm.* istio.*
-export ISTIO_VERSION=1.0.0
-rm istio-${ISTIO_VERSION} -rf

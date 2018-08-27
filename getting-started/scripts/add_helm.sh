@@ -83,4 +83,5 @@ cp helm.cert.pem $(helm home)/cert.pem
 cp helm.key.pem $(helm home)/key.pem
 
 echo "verify security"
+sleep 3
 helm ls --tls

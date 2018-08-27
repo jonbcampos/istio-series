@@ -10,9 +10,16 @@ echo "add istio to the path"
 export PATH=$PWD/bin:$PATH
 
 echo "install istio"
-# kubectl create -f install/kubernetes/helm/helm-service-account.yaml
-# helm init --service-account tiller
+kubectl apply -f install/kubernetes/helm/istio/templates/crds.yaml
+
 helm install install/kubernetes/helm/istio \
     --name istio \
     --tls \
-    --namespace istio-system
+    --namespace istio-system \
+	--set global.mtls.enabled=true \
+	--set grafana.enabled=true \
+	--set grafana.persist=false \
+	--set grafana.storageClassName="" \
+	--set servicegraph.enabled=true \
+	--set tracing.enabled=true \
+	--set kiali.enabled=true

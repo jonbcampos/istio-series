@@ -8,6 +8,8 @@ To run this code here are the quick steps.
 git clone https://github.com/jonbcampos/istio-series.git
 cd istio-series/getting-started/scripts
 sh startup.sh
+sh add_helm.sh
+sh add_istio.sh
 ```
 
 ### To Teardown:

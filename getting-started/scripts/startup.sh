@@ -47,6 +47,3 @@ kubectl get svc
 
 echo "enable services"
 gcloud services enable cloudbuild.googleapis.com
-
-sh add_helm.sh
-sh add_istio.sh

@@ -13,5 +13,9 @@ echo "add in the ingress"
 kubectl apply -f samples/bookinfo/networking/bookinfo-gateway.yaml
 kubectl get gateway
 
+echo "checking for gateway completion"
 sleep 10
 sh check_bookinfo_gateway.sh
+
+echo "if this errors out you can always retry by calling:"
+echo "sh check_bookinfo_gateway.sh"

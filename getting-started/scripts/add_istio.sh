@@ -11,7 +11,7 @@ cd istio-${ISTIO_VERSION}/
 echo "add istio to the path"
 export PATH=${PWD}/bin:$PATH
 
-echo "install istio"
+echo "install istio - this might take a moment..."
 # kubectl apply -f install/kubernetes/helm/istio/templates/crds.yaml
 # sleep 5
 helm install install/kubernetes/helm/istio \
@@ -25,3 +25,8 @@ helm install install/kubernetes/helm/istio \
 	--set servicegraph.enabled=true \
 	--set tracing.enabled=true \
 	--set kiali.enabled=true
+
+echo "------------------------------------"
+echo "add istio complete"
+echo "now get to developing. If you want to add in the BookInfo sample you can do that by running the following:"
+echo "sh launch_bookinfo.sh"

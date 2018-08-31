@@ -67,6 +67,7 @@ helm init \
     --tls-ca-cert ca.cert.pem \
     --service-account tiller
 helm repo update
+sleep 5
 
 echo "verify helm"
 kubectl get deploy,svc tiller-deploy -n kube-system
@@ -88,5 +89,5 @@ helm ls --tls
 
 echo "------------------------------------"
 echo "add helm complete"
-echo "now run"
+echo "now run:"
 echo "sh add_istio.sh"

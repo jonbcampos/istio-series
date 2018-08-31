@@ -47,5 +47,5 @@ kubectl get svc
 
 echo "------------------------------------"
 echo "startup complete"
-echo "now run"
+echo "now run:"
 echo "sh add_helm.sh"

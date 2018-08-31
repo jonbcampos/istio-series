@@ -12,8 +12,8 @@ echo "add istio to the path"
 export PATH=${PWD}/bin:$PATH
 
 echo "install istio"
-kubectl apply -f install/kubernetes/helm/istio/templates/crds.yaml
-sleep 5
+# kubectl apply -f install/kubernetes/helm/istio/templates/crds.yaml
+# sleep 5
 helm install install/kubernetes/helm/istio \
     --name istio \
     --tls \

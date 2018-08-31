@@ -85,3 +85,8 @@ cp helm.key.pem $(helm home)/key.pem
 echo "verify security"
 sleep 3
 helm ls --tls
+
+echo "------------------------------------"
+echo "add helm complete"
+echo "now run"
+echo "sh add_istio.sh"

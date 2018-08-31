@@ -45,5 +45,7 @@ kubectl get pods
 echo "list production services"
 kubectl get svc
 
-echo "enable services"
-gcloud services enable cloudbuild.googleapis.com
+echo "------------------------------------"
+echo "startup complete"
+echo "now run"
+echo "sh add_helm.sh"

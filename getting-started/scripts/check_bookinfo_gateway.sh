@@ -7,6 +7,7 @@ export SECURE_INGRESS_PORT=$(kubectl -n istio-system get service istio-ingressga
 
 echo "Gateway URL"
 export GATEWAY_URL=$INGRESS_HOST:$INGRESS_PORT
+echo http://${GATEWAY_URL}/productpage
 
 echo "confirm app is running"
 curl -o /dev/null -s -w "%{http_code}\n" http://${GATEWAY_URL}/productpage

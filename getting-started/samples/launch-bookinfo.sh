@@ -21,4 +21,4 @@ echo "if this errors out you can always retry by calling:"
 echo "sh check_bookinfo_gateway.sh"
 
 echo "you'll also want to add in the version routing for the samples:"
-echo "sh add_bookinfo_version_routing.sh"
+echo "sh ~/istio-series/getting-started/samples/add-bookinfo-version-routing.sh"

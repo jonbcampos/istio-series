@@ -29,4 +29,4 @@ helm install install/kubernetes/helm/istio \
 echo "------------------------------------"
 echo "add istio complete"
 echo "now get to developing. If you want to add in the BookInfo sample you can do that by running the following:"
-echo "sh launch_bookinfo.sh"
+echo "sh ~/istio-series/getting-started/samples/launch-bookinfo.sh"

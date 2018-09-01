@@ -23,3 +23,5 @@ gcloud container clusters list
 echo "cleanup files"
 rm $(helm home) -rf
 rm ca.* tiller.* helm.* istio.*
+
+echo "teardown complete"

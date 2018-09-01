@@ -90,4 +90,4 @@ helm ls --tls
 echo "------------------------------------"
 echo "add helm complete"
 echo "now run:"
-echo "sh add_istio.sh"
+echo "sh add-istio.sh"

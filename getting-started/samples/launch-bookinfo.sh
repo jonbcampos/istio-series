@@ -2,7 +2,7 @@
 
 echo "change directory"
 export ISTIO_VERSION=1.0.0
-cd istio-${ISTIO_VERSION}/
+cd ~/istio-series/getting-started/scripts/istio-${ISTIO_VERSION}/
 
 echo "launch bookinfo sample"
 kubectl label namespace default istio-injection=enabled
@@ -15,7 +15,7 @@ kubectl get gateway
 
 echo "checking for gateway completion"
 sleep 10
-sh check-bookinfo-gateway.sh
+sh ~/istio-series/getting-started/samples/check-bookinfo-gateway.sh
 
 echo "if this errors out you can always retry by calling:"
 echo "sh ~/istio-series/getting-started/samples/check-bookinfo-gateway.sh"

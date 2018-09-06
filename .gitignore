@@ -7,6 +7,10 @@ yarn-error.log*
 .DS_Store
 */**/.DS_Store
 
+# IDE
+*.iml
+.idea
+
 # Runtime data
 pids
 *.pid

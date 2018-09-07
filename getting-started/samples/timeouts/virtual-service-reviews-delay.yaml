@@ -4,7 +4,7 @@ metadata:
   name: reviews
 spec:
   hosts:
-    - reviews
+  - reviews
   http:
   - route:
     - destination:

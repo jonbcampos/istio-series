@@ -4,7 +4,7 @@ metadata:
   name: ratings
 spec:
   hosts:
-    - ratings
+  - ratings
   http:
   - fault:
     - delay:

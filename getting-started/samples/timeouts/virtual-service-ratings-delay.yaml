@@ -7,10 +7,10 @@ spec:
   - ratings
   http:
   - fault:
-    - delay:
+      delay:
         percent: 100
         fixedDelay: 2s
-      route:
-      - destination:
-          host: ratings
-          subset: v1
+    route:
+    - destination:
+        host: ratings
+        subset: v1

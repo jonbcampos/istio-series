@@ -14,7 +14,7 @@ kubectl apply -f samples/bookinfo/networking/bookinfo-gateway.yaml
 kubectl get gateway
 
 echo "checking for gateway completion"
-sleep 10
+sleep 30
 sh ~/istio-series/getting-started/samples/check-bookinfo-gateway.sh
 
 echo "if this errors out you can always retry by calling:"
